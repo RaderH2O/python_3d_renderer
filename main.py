@@ -52,7 +52,6 @@ while running:
     camera.update()
 
     camera.turn(dt, 0.3)
-    camera.m = -1/camera.m
     window.fill((0, 0, 0))
 
 

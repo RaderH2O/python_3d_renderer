@@ -23,7 +23,7 @@ class Camera:
 
     def update(self):
         self.sign = -1 if sin(self.angle) > 0 else 1
-        self.m = -self.radius * cos(self.angle) / (self.radius * (sin(self.angle) if sin(self.angle) != 0 else 0.001))
+        self.m = (-1) / (-self.radius * cos(self.angle) / (self.radius * (sin(self.angle) if sin(self.angle) != 0 else 0.001)))
         self.x = self.radius * cos(self.angle)
         self.y = self.radius * sin(self.angle)
 
