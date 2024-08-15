@@ -27,7 +27,9 @@ class Camera:
         self.x = self.radius * cos(self.angle)
         self.y = self.radius * sin(self.angle)
 
-        self.pp = (- 100 * cos(self.angle), - 100 * sin(self.angle))
+        self.pp = [ 200 * cos(self.angle), 200 * sin(self.angle)]
+        self.pp[0] = 1 / (self.pp[0] or 0.001)
+        self.pp[1] = 1 / (self.pp[1] or 0.001)
 
     def get_normal(self):
         divisor = self.m ** 2 + 1 ** 2
